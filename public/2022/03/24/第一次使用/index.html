@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="1.注册github账号0）如果没有GitHub帐号，使用你的邮箱注册GitHub帐号 https:&#x2F;&#x2F;github.com&#x2F; 1）安装本地git 从Git官网下载安装：Git - Downloading Package 2）设置本地git，输入在Git Bash或其他终端中命令 12git config --global user.name &quot;你的GitHub用户名&quot;git">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="1.注册github账号0）如果没有GitHub帐号，使用你的邮箱注册GitHub帐号 https:&#x2F;&#x2F;github.com&#x2F; 1）安装本地git 从Git官网下载安装：Git - Downloading Package 2）设置本地git，输入在Git Bash或其他终端中命令 12git config --global user.name &quot;你的GitHub用户名&quot;git">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-24T15:40:00.000Z">
-<meta property="article:modified_time" content="2022-03-24T15:56:34.943Z">
+<meta property="article:modified_time" content="2022-03-24T17:24:28.288Z">
 <meta property="article:author" content="九号会所">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
@@ -105,6 +105,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -134,11 +135,38 @@
     <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -184,9 +212,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-03-24 23:40:00 / 修改时间：23:56:34" itemprop="dateCreated datePublished" datetime="2022-03-24T23:40:00+08:00">2022-03-24</time>
+              <time title="创建时间：2022-03-24 23:40:00" itemprop="dateCreated datePublished" datetime="2022-03-24T23:40:00+08:00">2022-03-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-25 01:24:28" itemprop="dateModified" datetime="2022-03-25T01:24:28+08:00">2022-03-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+                </span>
             </span>
 
           
@@ -219,7 +262,7 @@
 <p>找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制</p>
 <p>4）打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key</p>
 <p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。</p>
-<p>5）在Git Bash中检测GitHub公钥设置是否成功，输入 ssh <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#109;</a> 进行测试。</p>
+<p>5）在Git Bash中检测GitHub公钥设置是否成功，输入 ssh <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a> 进行测试。</p>
 <h4 id="2-申请代码库权限"><a href="#2-申请代码库权限" class="headerlink" title="2.申请代码库权限"></a>2.申请代码库权限</h4><p>私信管理员申请 nineclub.github.io权限。</p>
 <h4 id="3-配置blog源码运行环境"><a href="#3-配置blog源码运行环境" class="headerlink" title="3.配置blog源码运行环境"></a>3.配置blog源码运行环境</h4><p>0）安装Node.js</p>
 <p>Hexo基于Node.js，Node.js下载地址：<a href="https://link.zhihu.com/?target=https://nodejs.org/en/download/">Download | Node.js</a> 下载安装包，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 node -v</p>
@@ -345,7 +388,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -439,6 +482,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
