@@ -112,3 +112,9 @@ search:
   field: post
   format: html
   limit: 10000
+
+excerpt:
+  depth: 5  
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
