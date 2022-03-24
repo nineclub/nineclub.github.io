@@ -42,4 +42,50 @@
         <category>酒单</category>
       </categories>
   </entry>
+  <entry>
+    <title>第一次使用教程</title>
+    <url>/2022/03/24/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h4 id="1-注册github账号"><a href="#1-注册github账号" class="headerlink" title="1.注册github账号"></a>1.注册github账号</h4><p>0）如果没有GitHub帐号，使用你的邮箱注册GitHub帐号 <a href="https://github.com/">https://github.com/</a></p>
+<p>1）安装本地git 从Git官网下载安装：<a href="https://git-scm.com/download/win">Git - Downloading Package</a></p>
+<p>2）设置本地git，输入在Git Bash或其他终端中命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的GitHub用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>3）生成ssh密钥文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>三个回车，默认不需要设置密码</p>
+<p>找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制</p>
+<p>4）打开<a href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key</p>
+<p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。</p>
+<p>5）在Git Bash中检测GitHub公钥设置是否成功，输入 ssh <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a> 进行测试。</p>
+<h4 id="2-申请代码库权限"><a href="#2-申请代码库权限" class="headerlink" title="2.申请代码库权限"></a>2.申请代码库权限</h4><p>私信管理员申请 nineclub.github.io权限。</p>
+<h4 id="3-配置blog源码运行环境"><a href="#3-配置blog源码运行环境" class="headerlink" title="3.配置blog源码运行环境"></a>3.配置blog源码运行环境</h4><p>0）安装Node.js</p>
+<p>Hexo基于Node.js，Node.js下载地址：<a href="https://link.zhihu.com/?target=https://nodejs.org/en/download/">Download | Node.js</a> 下载安装包，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 node -v</p>
+<p>1）找地方创建一个空文件夹</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> nineclub_blog</span><br><span class="line"><span class="built_in">cd</span> nineclub_blog</span><br></pre></td></tr></table></figure>
+
+<p>2）下载blog源码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone git@github.com:nineclub/nineclub.github.io.git</span><br></pre></td></tr></table></figure>
+
+<p>3） 安装hexo</p>
+<p>在blog文件夹中使用npm命令安装Hexo和他的插件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd nineclub.github.io</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-admin --save </span><br></pre></td></tr></table></figure>
+
+<p>4）配置完成</p>
+<h4 id="4-博客编写"><a href="#4-博客编写" class="headerlink" title="4.博客编写"></a>4.博客编写</h4><p>在blog文件夹中输入命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s -d</span><br></pre></td></tr></table></figure>
+
+<p>此时启动blog服务。默认blog网址为localhost:4000 。编写博客的网址为localhost:4000/admin</p>
+<p>markdown文档编写教程<a href="https://www.jianshu.com/p/191d1e21f7ed">https://www.jianshu.com/p/191d1e21f7ed</a></p>
+<h4 id="5-更新规范"><a href="#5-更新规范" class="headerlink" title="5.更新规范"></a><strong>5.更新规范</strong></h4><p>先将源码改动推送到source分支上，再hexo g 发布网站到master分支上。</p>
+<p>执行 <code>git add</code> .、<code>git commit -m &quot;commit&quot;</code>、<code>git push origin source</code> 提交源码文件</p>
+<p><code>hexo g</code>和 <code>hexo d</code>生成静态网页部署至Github上</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
 </search>
